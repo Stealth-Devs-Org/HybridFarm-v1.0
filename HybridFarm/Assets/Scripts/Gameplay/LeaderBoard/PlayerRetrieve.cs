@@ -31,58 +31,6 @@ public class PlayerRetrieve : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        StartCoroutine(ApiController.GetJwtKey((string key) =>
-        {
-            if (string.IsNullOrEmpty(key))
-            {
-                Debug.Log("JWT key is null or empty");
-                return;
-            }
-            StartCoroutine(ApiController.GetPlayersList(key, (List<JObject> players) =>
-            {
-                if (players == null)
-                {
-                    Debug.Log("Failed to retrieve players list");
-                    return;
-                }
-
-                int totalPlayers = players.Count;
-
-                List<Player> playerList = new();
-
-                foreach (JObject obj in players)
-                {
-                    if (obj["username"].ToString() == PlayerPrefs.GetString("userName"))
-                    {
-                        Player player = new()
-                        {
-                            userName = PlayerPrefs.GetString("userName"),
-                            firstName = PlayerPrefs.GetString("firstName"),
-                            lastName = PlayerPrefs.GetString("lastName"),
-                            score = PlayerPrefs.GetInt("PlayerScore"),
-                        };
-                        playerList.Add(player);
-                    }
-                    else
-                    {
-                        Player player = new()
-                        {
-                            userName = obj["username"].ToString(),
-                            firstName = obj["firstname"].ToString(),
-                            lastName = obj["lastname"].ToString(),
-                            score = CalculateScore(obj["username"].ToString(), totalPlayers, interval),
-                        };
-                        playerList.Add(player);
-                    }
-                }
-                RankPlayers(playerList);
-                foreach (Player player in playerList)
-                {
-                    //Debug.Log("Rank: " + player.rank + " Username: " + player.userName + " Score: " + player.score);
-                }
-                leaderBoardContent.GetComponent<PlayerView>().DisplayPlayers(playerList);
-            }));
-        }));
     }
 
     // Update is called once per frame

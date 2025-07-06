@@ -36,11 +36,12 @@ public class LevelSelect : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(attackAlgorithm.GetComponent<AttackAlgorithm>().GetAttackInterval((attackInterval) =>
-            {
-                loadingScreen.SetActive(false);
-                SceneManager.LoadScene(level);
-            }));
+
+            loadingScreen.SetActive(false);
+            SceneManager.LoadScene(level);
+    
+  
         }
+        yield break;
     }
 }

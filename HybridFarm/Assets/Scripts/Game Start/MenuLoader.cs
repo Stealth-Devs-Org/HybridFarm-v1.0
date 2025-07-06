@@ -36,10 +36,6 @@ public class MenuLoader : MonoBehaviour
 
     IEnumerator WaitForAuthenticationAndLoadNextScene()
     {
-        while (!PlayerAuthentication.IsAuthenticated)
-        {
-            yield return null; // Wait until authenticated
-        }
 
         yield return new WaitForSeconds(3f); // Additional delay (optional)
 
