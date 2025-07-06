@@ -17,6 +17,8 @@ public class PredatorSpawn : MonoBehaviour
     public Vector2 fieldRange = new Vector2(3, 1);
     public float moveSpeed = 40.0f; // Speed at which the object will move to the new position
 
+    public float spawnDelay = 10.0f;
+
 
     bool canSpawn = true; // Flag to control cool down
 
@@ -54,12 +56,6 @@ public class PredatorSpawn : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnCoolDown()
-    {
-        canSpawn = false;
-        yield return new WaitForSeconds(0.3f);
-        canSpawn = true;
-    }
 
     IEnumerator MoveObject(Transform objectToMove, Vector3 targetPosition, float moveSpeed)
     {
@@ -102,5 +98,18 @@ public class PredatorSpawn : MonoBehaviour
         {
             predatorToSpawn = snowleopard;
         }
+    }
+
+    public void StartSpawnCoolDown()
+    {
+        canSpawn = false;
+        StartCoroutine(SpawnCoolDown());
+    }
+
+    IEnumerator SpawnCoolDown()
+    {
+        spawnDelay = Random.Range(15.0f, 25.0f); // Randomize the spawn delay between 5 to 10 seconds
+        yield return new WaitForSeconds(spawnDelay);
+        canSpawn = true;
     }
 }

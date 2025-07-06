@@ -3,7 +3,12 @@ guid: 7735caea381e9d941b9a7d953d4339ae
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - fox: {fileID: 4466340895633805002, guid: ba3c9c3a0ad6c034787b1891a99a1464, type: 3}
+  - lynx: {instanceID: 0}
+  - couguar: {instanceID: 0}
+  - wolf: {instanceID: 0}
+  - snowleopard: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
