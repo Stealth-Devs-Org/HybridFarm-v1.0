@@ -225,7 +225,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Stealth-Logo_0: 6621125228304262266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
