@@ -11,5 +11,5 @@ The project was developed as part of an academic software design challenge, focu
 - 📘 **Facebook Page:** [Hybrid Farm](https://www.facebook.com/profile.php?id=61557334201111&mibextid=ZbWKwL)
 - 🎥 **Gameplay Glimpse:** [Watch here](https://fb.watch/tIER01mfnW/)
 
-## 📂 Repository Structure
+
 Copyright © 2024 Stealth Development
