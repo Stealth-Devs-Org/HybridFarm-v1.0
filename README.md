@@ -7,8 +7,9 @@ This project is released to support learning, collaboration, and community-drive
 
 🔗 Links
 
-📘 Itch.io: https://itch.io/profile/stealthmetaverse
-🎥 Gameplay Glimpse: https://web.facebook.com/share/v/183aN5YyJy/
+📘 Itch.io: https://itch.io/profile/stealthmetaverse 
+
+🎥 Game Glimpse: https://web.facebook.com/share/v/183aN5YyJy/
 
 📜 License & Usage
 
