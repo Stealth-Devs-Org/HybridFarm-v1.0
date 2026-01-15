@@ -12,3 +12,4 @@ The project was developed as part of an academic software design challenge, focu
 - 🎥 **Gameplay Glimpse:** [Watch here](https://fb.watch/tIER01mfnW/)
 
 ## 📂 Repository Structure
+Copyright © 2024 Stealth Development
